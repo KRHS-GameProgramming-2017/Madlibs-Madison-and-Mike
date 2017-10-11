@@ -1,4 +1,4 @@
-# Written by Chris Spooner
+# Written by 
 from Screens import *
 from Getter import *
 from Story1 import *
