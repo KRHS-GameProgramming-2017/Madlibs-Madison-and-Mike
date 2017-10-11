@@ -48,9 +48,19 @@ def getNumber(prompt, debug):
 def isSwear(word):
 	swearList = ["poop",
 				 "dumb",
-				 "stupid"]
+				 "stupid",
+                 "fuck",
+                 "shit",
+                 "crap",
+                 "bitch",
+                 "cunt",
+                 "slut",
+                 "ass"
+                 "nigger"]
 	if word.lower() in swearList:
 		return True
 	else:
 		return False
+def isPolitical(word)
+    politicalList = []
 	

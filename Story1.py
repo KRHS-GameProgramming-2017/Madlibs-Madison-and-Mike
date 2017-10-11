@@ -1,6 +1,6 @@
 from Getter import *
 
-#mike waz heeerr
+
 
 def story1(debug= False):
     if debug: print "--In story1 function--"
