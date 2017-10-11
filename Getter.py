@@ -1,67 +1,79 @@
+
+swearCounter = 0
+
 def getMenuResponse(debug = False):
-	if debug: print "--In getMenuResponse function--"
-	goodInput = False
-	while not goodInput:
-		response = raw_input("Make a selection please: ")
-		if (response == "1" or 
-			response == "one" or 
-			response == "story 1"):
-				goodInput = True
-				response = "1"
-		elif (response == "q" or 
-			  response == "quit" or 
-			  response == "exit"):
-			goodInput = True
-			response = "q"
-		else:
-			print "Please enter a valid input!"
-	return response
-		
+    if debug: print "--In getMenuResponse function--"
+    goodInput = False
+    while not goodInput:
+        response = raw_input("Make a selection please: ")
+        if (response == "1" or 
+            response == "one" or 
+            response == "story 1"):
+                goodInput = True
+                response = "1"
+        elif (response == "q" or 
+              response == "quit" or 
+              response == "exit"):
+            goodInput = True
+            response = "q"
+        else:
+            print "Please enter a valid input!"
+    return response
+        
 def getWord(prompt, debug):
-	if debug: print "--In getWord function--"
-	goodInput = False
-	while not goodInput:
-		response = raw_input(prompt)
-		if isSwear(response):
-			goodInput = False
-			print "Don't go using that type of language here"
-		elif response == "":
-			goodInput = False
-			print "Type something"
-		else:
-			goodInput = True
-	return response
-		
+    if debug: print "--In getWord function--"
+    goodInput = False
+    while not goodInput:
+        response = raw_input(prompt)
+        if isSwear(response):
+            goodInput = False
+            if swearCounter == 0: print "Don't go using that type of language here!"
+            elif swearCounter == 1: print "We have already asked you once to stop so please stop using that type of language."
+            elif swearCounter == 2: print "Can you even read? If you can, please scroll up a few lines."
+            elif swearCounter == 3: print "The program will terminate if you continue to ignore its wishes"
+            elif swearCounter == 4: exit()
+            swearCounter += 1
+            
+        elif response == "":
+            goodInput = False
+            print "Type something"
+        elif isPolitical(response):
+            goodInput = False
+            print "Leave politics out of it."
+        else:
+            goodInput = True
+    return response
+        
 def getNumber(prompt, debug):
-	if debug: print "--In getWord function--"
-	goodInput = False
-	numbers = "1234567890."
-	while not goodInput:
-		response = raw_input(prompt)
-		goodInput = True	
-		for letter in response:
-			if letter not in numbers:
-				goodInput = False
-				print letter + " is not a number"
-	return response	
-			
+    if debug: print "--In getWord function--"
+    goodInput = False
+    numbers = "1234567890."
+    while not goodInput:
+        response = raw_input(prompt)
+        goodInput = True    
+        for letter in response:
+            if letter not in numbers:
+                goodInput = False
+                print letter + " is not a number"
+    return response 
+            
 def isSwear(word):
-	swearList = ["poop",
-				 "dumb",
-				 "stupid",
+    swearList = ["poop",
+                 "dumb",
+                 "stupid",
                  "fuck",
                  "shit",
                  "crap",
                  "bitch",
                  "cunt",
                  "slut",
-                 "ass"
+                 "ass",
                  "nigger",
                  "fucker"]
-	if word.lower() in swearList:
-		return True
-	else:
-		return False
-def isPolitical(word)
-    politicalList = []
-	
+    if word.lower() in swearList:
+        return True
+    else:
+        return False
+def isPolitical(word):
+    politicalList = ["hello"]
+    
