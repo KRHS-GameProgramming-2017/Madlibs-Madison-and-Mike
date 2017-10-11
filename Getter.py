@@ -55,7 +55,7 @@ def isSwear(word):
                  "bitch",
                  "cunt",
                  "slut",
-                 "ass"
+                 "ass",
                  "nigger",
                  "fucker"]
 	if word.lower() in swearList:
