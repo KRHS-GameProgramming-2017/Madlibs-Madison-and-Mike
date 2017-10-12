@@ -76,6 +76,7 @@ def isSwear(word):
                  "ass",
                  "nigger",
                  "fucker"]
+
     if word.lower() in swearList:
         return True
     else:
@@ -84,3 +85,27 @@ def isSwear(word):
 def isPolitical(word):
     politicalList = ["hello"]
     
+
+	if word.lower() in swearList:
+		return True
+	else:
+		return False
+        
+#def isPolitical(word)
+    #politicalList = []
+    
+def getIng(prompt, debug):
+    if debug: print "--In getIng function--"
+    goodInput= False
+    ing= "ing"
+    while not goodInput:
+        response = raw_input(prompt)
+        goodInput = True
+        for letter in response:
+            if letter not in ing:
+                goodInput = False
+                print letter + " does not end in ing"
+    return response
+    
+	
+
