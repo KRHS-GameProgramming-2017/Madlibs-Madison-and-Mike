@@ -77,13 +77,18 @@ def isSwear(word):
                  "nigger",
                  "fucker"]
 
+=======
+                 "fucker",
+                 "sex",
+                 "porn"]
+>>>>>>> Stashed changes
     if word.lower() in swearList:
         return True
     else:
         return False
 #Political Filter
 def isPolitical(word):
-    politicalList = ["hello"]
+    politicalList = ["Donald", "Trump", "Obama", "Bernie"]
     
 
 	if word.lower() in swearList:
