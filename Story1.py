@@ -8,7 +8,7 @@ def story1(debug= False):
     Verbing1 = getIng("A Verb(ing): ", debug)  
     Noun1 = getWord("A Noun: ", debug)
     Noun2 = getWord("A Noun: ", debug)
-    Verbing2 = getWord("A Verb(ing):", debug)
+    Verbing2 = getIng("A Verb(ing):", debug)
     Adjective1 = getWord("A Adjective:", debug)
     
     
