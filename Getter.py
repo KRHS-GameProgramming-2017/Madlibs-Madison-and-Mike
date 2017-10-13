@@ -85,13 +85,13 @@ def isSwear(word):
         return False
 #Political Filter
 def isPolitical(word):
-    politicalList = ["Donald", "Trump", "Obama", "Bernie"]
+    politicalList = ["Donald", "Trump", "Obama", "Bernie", "Sanders", "Bush", "9/11", "Hillary", "Clinton", "Election", "republican", "democrat", "Regan", ]
     
 
-	if word.lower() in swearList:
-		return True
-	else:
-		return False
+    if word.lower() in politicalList:
+        return True
+    else:
+        return False
         
 #def isPolitical(word)
     #politicalList = []
