@@ -104,7 +104,7 @@ def getIng(prompt, debug):
         if len(response) < 3:
             print "repsonse was not long enough"
         elif response[-3:] == "ing":
-        goodInput = True
+            goodInput = True
         else:
             print "does not end in ing"
     return response
