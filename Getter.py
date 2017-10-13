@@ -109,5 +109,5 @@ def getIng(prompt, debug):
             print "does not end in ing"
     return response
     
-	
+    
 
