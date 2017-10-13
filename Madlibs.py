@@ -9,6 +9,7 @@ def madlibs(debug = False):
     raw_input("Press Enter to Continue")
     
     end = False
+    swearCounter = [0]
     while not end:
         print menu(debug)
         response = getMenuResponse(debug)
@@ -16,7 +17,7 @@ def madlibs(debug = False):
         if response == "q":
             exit()
         elif response == "1":
-            print story1()
+            print story1(swearCounter, debug)
             raw_input("Press Enter to Continue")
             
     

@@ -1,7 +1,5 @@
 
 
-swearCounter = 0
-
 #Handles Menues
 def getMenuResponse(debug = False):
     if debug: print "--In getMenuResponse function--"
@@ -22,7 +20,7 @@ def getMenuResponse(debug = False):
             print "Please enter a valid input!"
     return response
 #Checks word against filters
-def getWord(prompt, debug):
+def getWord(prompt, swearCounter, debug):
     if debug: print "--In getWord function--"
     goodInput = False
     while not goodInput:
@@ -31,12 +29,12 @@ def getWord(prompt, debug):
         if isSwear(response):
             goodInput = False
             #Counts and displays messages
-            if swearCounter == 0: print "Don't go using that type of language here!"
-            elif swearCounter == 1: print "We have already asked you once to stop so please stop using that type of language."
-            elif swearCounter == 2: print "Can you even read? If you can, please scroll up a few lines."
-            elif swearCounter == 3: print "The program will terminate if you continue to ignore its wishes"
-            elif swearCounter == 4: exit()
-            swearCounter += 1
+            if swearCounter[0] == 0: print "Don't go using that type of language here!"
+            elif swearCounter[0] == 1: print "We have already asked you once to stop so please stop using that type of language."
+            elif swearCounter[0] == 2: print "Can you even read? If you can, please scroll up a few lines."
+            elif swearCounter[0] == 3: print "The program will terminate if you continue to ignore its wishes"
+            elif swearCounter[0] == 4: exit()
+            swearCounter[0] += 1
         #Tests for no input
         elif response == "":
             goodInput = False
