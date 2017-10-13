@@ -81,7 +81,7 @@ def isSwear(word):
                  "fucker",
                  "sex",
                  "porn"]
->>>>>>> Stashed changes
+
     if word.lower() in swearList:
         return True
     else:
