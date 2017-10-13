@@ -5,7 +5,7 @@ def story1(debug= False):
     if debug: print "--In story1 function--"
     
     MaleName = getWord("A Name: ", debug)
-    Verbing1 = getWord("A Verb(ing): ", debug) + getIng(debug) 
+    Verbing1 = getIng("A Verb(ing): ", debug)  
     Noun1 = getWord("A Noun: ", debug)
     Noun2 = getWord("A Noun: ", debug)
     Verbing2 = getWord("A Verb(ing):", debug)
