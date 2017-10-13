@@ -75,9 +75,6 @@ def isSwear(word):
                  "slut",
                  "ass",
                  "nigger",
-                 "fucker"]
-
-=======
                  "fucker",
                  "sex",
                  "porn"]
