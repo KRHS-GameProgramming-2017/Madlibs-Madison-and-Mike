@@ -1,14 +1,14 @@
 from Getter import *
 
 
-def story1(sc, debug= False):
+def story1(sc=[0], debug= False):
     if debug: print "--In story1 function--"
     
     MaleName = getWord("A Male Name: ", sc, debug)
-    Verbing1 = getIng("A Verb(ing): ", sc, debug)  
-    Noun1 = getWord("A Noun: ", sc, ebug)
+    Verbing1 = getIng("A Verb(ing): ", debug)  
+    Noun1 = getWord("A Noun: ", sc, debug)
     Noun2 = getWord("A Noun: ", sc, debug)
-    Verbing2 = getIng("A Verb(ing):", sc, debug)
+    Verbing2 = getIng("A Verb(ing):", debug)
     Adjective1 = getWord("A Adjective:", sc, debug)
     
     

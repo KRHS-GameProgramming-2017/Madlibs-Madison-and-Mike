@@ -20,7 +20,7 @@ def getMenuResponse(debug = False):
             print "Please enter a valid input!"
     return response
 #Checks word against filters
-def getWord(prompt, swearCounter, debug):
+def getWord(prompt, swearCounter=[0], debug=False):
     if debug: print "--In getWord function--"
     goodInput = False
     while not goodInput:
