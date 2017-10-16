@@ -11,6 +11,11 @@ def getMenuResponse(debug = False):
             response == "story 1"):
                 goodInput = True
                 response = "1"
+        if (response == "2" or
+            response == "two" or
+            response == "story 2"):
+                goodInput = True
+                response = "2"
         elif (response == "q" or 
               response == "quit" or 
               response == "exit"):
