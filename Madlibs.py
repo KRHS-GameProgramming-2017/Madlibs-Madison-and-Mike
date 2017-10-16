@@ -1,6 +1,7 @@
 from Screens import *
 from Getter import *
 from Story1 import *
+from story2 import *
 
 def madlibs(debug = False):
     if debug: print "--Debugging Activated--"
@@ -18,6 +19,9 @@ def madlibs(debug = False):
             exit()
         elif response == "1":
             print story1(swearCounter, debug)
+            raw_input("Press Enter to Continue")
+        elif response == "2":
+            print story2()
             raw_input("Press Enter to Continue")
             
     
