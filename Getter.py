@@ -83,9 +83,7 @@ def isSwear(word):
         return False
 #Political Filter
 def isPolitical(word):
-    politicalList = ["Donald", "Trump", "Obama", "Bernie", "Sanders", "Bush", "9/11", "Hillary", "Clinton", "Election", "republican", "democrat", "Regan", ]
-    
-
+    politicalList = ["donald", "trump", "obama", "bernie", "sanders", "bush", "9/11", "hillary", "clinton", "election", "republican", "democrat", "regan"]
     if word.lower() in politicalList:
         return True
     else:
@@ -100,12 +98,22 @@ def getIng(prompt, debug):
     while not goodInput:
         response = raw_input(prompt)
         if len(response) < 3:
-            print "repsonse was not long enough"
+            print response + " is not long enough"
         elif response[-3:] == "ing":
             goodInput = True
         else:
-            print "does not end in ing"
+            print response + " does not end in ing"
     return response
     
-    
-
+def geEd(prompt, debug):
+    if debug: print "--In getEd function"
+    goodInput = False
+    while not goodInput:
+        response = raw_input(prompt)
+        if len(response) < 2:
+            print response + " is not long enough"
+        elif response[-2:] == "ed":
+            goodInput = True
+        else:
+            print response + " dose not end in ed"
+    return response
