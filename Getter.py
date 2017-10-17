@@ -124,7 +124,7 @@ def getIng(prompt, debug):
             print response + " does not end in ing"
     return response
     
-def geEd(prompt, debug):
+def getEd(prompt, debug):
     if debug: print "--In getEd function"
     goodInput = False
     while not goodInput:
