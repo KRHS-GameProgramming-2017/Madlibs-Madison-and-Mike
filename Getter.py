@@ -80,7 +80,8 @@ def isSwear(word):
                  "nigger",
                  "fucker",
                  "sex",
-                 "porn"]
+                 "porn",
+                 "damn"]
 
     if word.lower() in swearList:
         return True
@@ -88,7 +89,20 @@ def isSwear(word):
         return False
 #Political Filter
 def isPolitical(word):
-    politicalList = ["donald", "trump", "obama", "bernie", "sanders", "bush", "9/11", "hillary", "clinton", "election", "republican", "democrat", "regan"]
+    politicalList = ["donald",
+                    "trump",
+                    "obama",
+                    "bernie",
+                    "sanders",
+                    "bush",
+                    "9/11",
+                    "hillary",
+                    "clinton",
+                    "election",
+                    "republican",
+                    "democrat",
+                    "regan",
+                    "immigrant"]
     if word.lower() in politicalList:
         return True
     else:
