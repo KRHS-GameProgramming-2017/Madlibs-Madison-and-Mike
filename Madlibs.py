@@ -2,6 +2,8 @@ from Screens import *
 from Getter import *
 from Story1 import *
 from story2 import *
+from Story3 import *
+from SecretStory import *
 
 def madlibs(debug = False):
     if debug: print "--Debugging Activated--"
@@ -23,9 +25,12 @@ def madlibs(debug = False):
         elif response == "2":
             print story2()
             raw_input("Press Enter to Continue")
-        #elif response == "3":
-            #print story3()
-            #raw_input("Press Enter to Continue")
+        elif response == "3":
+            print story3()
+            raw_input("Press Enter to Continue")
+        elif response == "secret":
+            print secretstory()
+            raw_input("Press Enter to Continue")
             
             
     

@@ -1,6 +1,6 @@
 from Getter import *
 
-def story2(debug= False):
+def story2(sc=[0], debug= False):
     if debug: print "--In story2 function--"
     
     FantasyCreature = getWord("A Fantasy Creature: ", debug)

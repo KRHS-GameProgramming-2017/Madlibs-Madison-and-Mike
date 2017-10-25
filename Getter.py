@@ -21,6 +21,12 @@ def getMenuResponse(debug = False):
               response == "exit"):
             goodInput = True
             response = "q"
+        elif (response == "3" or
+              response == "three" or
+              response == "story 3"):
+            goodInput = True
+        elif (response == "secret"):
+            goodInput = True
         else:
             print "Please enter a valid input!"
     return response
@@ -81,7 +87,9 @@ def isSwear(word):
                  "fucker",
                  "sex",
                  "porn",
-                 "damn"]
+                 "damn",
+                 "fucking",
+                 "shitting"]
 
     if word.lower() in swearList:
         return True
@@ -136,3 +144,31 @@ def getEd(prompt, debug):
         else:
             print response + " dose not end in ed"
     return response
+
+def getSWV(prompt, debug):
+    if debug: print "--In getSWV function"
+    goodInput = False
+    SWV = ["Kylo Ren",
+          "Darth Maul",
+          "Darth Vader",
+          "Count Dooku",
+          "Boba Fett",
+          "General Grievous",
+          "Jabba the Hutt",
+          "Darth Bane",
+          "Asajj Ventress",
+          "Cad Bane",
+          "Supreme Leader Snoke",
+          "General Hux",
+          "The Inquisitor",
+          "Darth Nihilus",
+          "Sheev Palpatine",
+          "Emporer Palpatine",
+          "Captain Phasma"]
+    while not goodInput:
+        response = raw_input(prompt)
+        goodInput = True    
+        for letter in response:
+            if letter not in SWV:
+                goodInput = False
+                print letter + " this is not a star wars villain"
